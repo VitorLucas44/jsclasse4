@@ -4,9 +4,9 @@ class Lieu {
         this.personnes = [];
     }
 }
-const Lieu = new Lieu('Molengeek')
-const Lieu = new Lieu('Snack')
-const Lieu = new Lieu('Maison')
+const Molengeek = new Lieu('Molengeek')
+const Snack = new Lieu('Snack')
+const Maison = new Lieu('Maison')
 
 class personnages{
     constructor(nom,prenom,argent){
@@ -25,4 +25,20 @@ class personnages{
     }
 }
 
-const personnages = new personnages('Vitor','Lucas', 10)
+const Vitor = new personnages('Vitor','Lucas', 10)
+
+class Bus{
+    constructor(peresonnes,caisse){
+    this.personnes = [];
+    this.caisse = 0;
+
+    }
+    embarquer(personne, lieuDepart, lieuArrivee) {
+        lieuDepart.personnes = lieuDepart.personnes.filter(
+        (p) => p !== personne
+        );
+        lieuArrivee.personnes.push(personne);
+    }
+    }
+    
+    const bus = new Bus();
