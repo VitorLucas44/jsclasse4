@@ -14,7 +14,15 @@ class personnages{
     this.prenom = prenom;
     this.argent = argent;
     }
-    seDeplacer(Lieu)
-    this.
-
+    seDeplacer(bus, lieuDepart, lieuArrivee) {
+        if (this.argent >= 2.5) {
+        this.argent -= 2.5;
+        bus.caisse += 2.5;
+        bus.embarquer(this, lieuDepart, lieuArrivee);
+        } else {
+        console.log("Vous n'avez pas assez d'argent pour prendre le bus.");
+        }
+    }
 }
+
+const personnages = new personnages('Vitor','Lucas', 10)
