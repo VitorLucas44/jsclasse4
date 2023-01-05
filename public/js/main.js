@@ -20,12 +20,11 @@ class personnages{
         bus.caisse += 2.5;
         bus.embarquer(this, lieuDepart, lieuArrivee);
         } else {
-        // console.log("Vous n'avez pas assez d'argent");
         }
     }
 }
 
-const Vitor = new personnages('Vitor','Lucas', 5)
+const Vitor = new personnages('Vitor','Lucas', 4)
 
 class Bus{
     constructor(peresonnes,caisse){
