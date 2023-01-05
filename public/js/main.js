@@ -20,12 +20,12 @@ class personnages{
         bus.caisse += 2.5;
         bus.embarquer(this, lieuDepart, lieuArrivee);
         } else {
-        console.log("Vous n'avez pas assez d'argent pour prendre le bus.");
+        // console.log("Vous n'avez pas assez d'argent");
         }
     }
 }
 
-const Vitor = new personnages('Vitor','Lucas', 10)
+const Vitor = new personnages('Vitor','Lucas', 5)
 
 class Bus{
     constructor(peresonnes,caisse){
@@ -42,3 +42,22 @@ class Bus{
     }
     
     const bus = new Bus();
+
+    console.log("8h vous etes a la maison")
+    Vitor.seDeplacer(bus, Maison, Molengeek);
+
+    console.log("8h45: Vous etes a Molengeek");
+
+    console.log("12h45: Vous sortez de Molengeek vous prenez le bus pour aller au snack");
+    Vitor.seDeplacer(bus, Molengeek, Snack);
+
+    console.log("13h30: Vous sortez du snack et vous rentrez pied à MolenGeek pour digérer");
+    Vitor.seDeplacer(bus, Snack, Molengeek);
+
+    console.log("17h10: Vous sortez de Molengeek vous prenez le bus pour rentrer chez vous");
+    Vitor.seDeplacer(bus, Molengeek, Maison);
+
+    console.log(`Votre argent: ${Vitor.argent}€`);
+    console.log(`L'argent du bus: ${bus.caisse}€`);
+
+
